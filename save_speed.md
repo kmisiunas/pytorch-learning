@@ -46,4 +46,4 @@ rnd_numpy = rnd.numpy()
 # Wall time: 1.27 ms
 ```
 
-file size was reduced from 380MB to ~340MB. Intrestingly, the loading performance was improved radically. Need more testiong to confirm this is a real effect
+file size was reduced from 380MB to ~340MB. Intrestingly, the loading performance was improved radically. Effect persits even after cold start of ipython. This suggests it is a real effect, but we must be careful since the 'system' time is at 0, while uncompressed version is mostly taken by the 'system' time.
