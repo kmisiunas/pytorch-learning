@@ -42,8 +42,8 @@ rnd_numpy = rnd.numpy()
 %time np.savez_compressed('testcsv3.np', rnd_numpy)
 #New file:  Wall time: 14.2 s
 
-%time tmp = np.load('testcsv3.np.npz')
-# Wall time: 1.27 ms
+%time tmp = np.load('testcsv3.np.npz').items()
+# Wall time: 1.92 s
 ```
 
-file size was reduced from 380MB to ~340MB. Intrestingly, the loading performance was improved radically. Effect persits even after cold start of ipython. This suggests it is a real effect, but we must be careful since the 'system' time is at 0, while uncompressed version is mostly taken by the 'system' time.
+file size was reduced from 380MB to ~340MB. Intrestingly, but __the loading performance is order of magnitude worse__. 
