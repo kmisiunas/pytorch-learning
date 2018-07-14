@@ -34,4 +34,4 @@ rnd_numpy = rnd.numpy()
 # Wall time: 184 ms
 ```
 
-**Conclusion** both have similar perfoemance. No real advantage of using either of them.
+**Conclusion** both have similar performance. 
