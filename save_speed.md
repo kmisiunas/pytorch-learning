@@ -35,3 +35,15 @@ rnd_numpy = rnd.numpy()
 ```
 
 **Conclusion** both have similar performance. 
+
+## With compression
+
+```
+%time np.savez_compressed('testcsv3.np', rnd_numpy)
+#New file:  Wall time: 14.2 s
+
+%time tmp = np.load('testcsv3.np.npz')
+# Wall time: 1.27 ms
+```
+
+file size was reduced from 380MB to ~340MB. Intrestingly, the loading performance was improved radically. Need more testiong to confirm this is a real effect
